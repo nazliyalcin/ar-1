@@ -3,39 +3,16 @@
   <head>
     <script src="./aframe.min.js"></script>
     <script src="./aframe-ar.js"> </script>
-    <style>
-        body {
-          margin: 0;
-          padding: 0;
-          overflow: hidden;
-        }
-    </style>
+
   </head>
   <body>
-   
-    <a-scene embedded artoolkit='sourceType: webcam;'>
-	   <a-assets>
-      <canvas id="line1" width="578" height="200"></canvas>
-    </a-assets>
-      <!-- <a-text value="Ericsson AR Demo"></a-text>
-      <a-box position='0 0 0.5' material='opacity: 0.6;'></a-box>
-      <a-triangle rotation="-90 0 0"></a-triangle> -->
-      <!--<a-marker-camera type="pattern" patternUrl="https://raw.githubusercontent.com/nazliyalcin/ar-1/master/ericsson.patt"></a-marker-camera>-->
-	  <a-marker-camera preset="custom" type="pattern" url="ericsson2.patt">
-       <a-box position='2 2 0' material='color: red;'></a-box>
-      </a-marker-camera>
-      
-      <!--<a-marker-camera preset='hiro'></a-marker-camera>-->
-    </a-scene>
+    
+	<a-scene embedded arjs='sourceType: webcam;'>
+	<!-- handle marker with your own pattern -->
+	<a-marker preset='custom' url='ericsson2.patt'>
+	<a-image src="ericsson2.jpg" position="0 0 0" rotation="90 180 0 "> </a-marker> <!-- add a simple camera -->
+	<a-entity camera></a-entity> 
+	</a-scene>
 
-    <script>
-      var canvas = document.getElementById('line1');
-      var context = canvas.getContext('2d');
-
-      context.beginPath();
-      context.moveTo(100, 150);
-      context.lineTo(450, 50);
-      context.stroke();
-    </script>
   </body>
 </html>
