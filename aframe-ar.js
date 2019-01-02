@@ -8307,7 +8307,7 @@ AFRAME.registerComponent('arjs-anchor', {
 				markerParameters.patternUrl = _this.data.patternUrl;
 				markerParameters.markersAreaEnabled = false
 			}else {
-				// console.assert( this.data.preset === '', 'illegal preset value '+this.data.preset)
+				 console.assert( this.data.preset === '', 'illegal preset value '+this.data.preset)
 			}
 
 			//////////////////////////////////////////////////////////////////////////////
