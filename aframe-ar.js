@@ -8283,9 +8283,9 @@ AFRAME.registerComponent('arjs-anchor', {
 			// honor this.data.preset
 			var markerParameters = Object.assign({}, arProfile.defaultMarkerParameters)
 
-			if( _this.data.preset === 'custom' ){
+			if( _this.data.preset === 'hiro' ){
 				markerParameters.type = 'pattern'
-				markerParameters.patternUrl = _this.data.patternUrl//THREEx.ArToolkitContext.baseURL+'examples/marker-training/examples/pattern-files/pattern-hiro.patt'
+				markerParameters.patternUrl = THREEx.ArToolkitContext.baseURL+'examples/marker-training/examples/pattern-files/pattern-hiro.patt'
 				markerParameters.markersAreaEnabled = false
 			}else if( _this.data.preset === 'kanji' ){
 				markerParameters.type = 'pattern'
@@ -8302,7 +8302,7 @@ AFRAME.registerComponent('arjs-anchor', {
 					barcodeValue:       _this.data.barcodeValue,
 					markersAreaEnabled: false
 				}
-			}else if( _this.data.type === 'pattern' ){
+			}else if( _this.data.type === 'custom' ){
 				markerParameters.type = _this.data.type
 				markerParameters.patternUrl = _this.data.patternUrl;
 				markerParameters.markersAreaEnabled = false
