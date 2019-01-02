@@ -8027,8 +8027,8 @@ ARjs.MarkersAreaUtils.createDefaultMarkersControlsParameters = function(tracking
 
 	if( trackingBackend === 'artoolkit' ){
 		// pattern hiro/kanji/a/b/c/f
-		var  = [
-			{markersControlsParameters
+		var  markersControlsParameters = [
+			{
 				type : 'pattern',
 				patternUrl : absoluteBaseURL + 'examples/marker-training/examples/pattern-files/pattern-hiro.patt',
 			},
