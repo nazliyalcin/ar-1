@@ -5610,7 +5610,7 @@ ARjs.Profile.prototype.reset = function () {
 	}
 	this.defaultMarkerParameters = {
 		type : 'pattern',
-		patternUrl : 'https://raw.githubusercontent.com/bigboytr/ar/master/ericsson.patt'//THREEx.ArToolkitContext.baseURL + '../data/data/patt.hiro',
+		patternUrl : THREEx.ArToolkitContext.baseURL + '../data/data/patt.hiro',
 		changeMatrixMode: 'modelViewMatrix',
 	}
 	return this
@@ -5665,7 +5665,7 @@ ARjs.Profile.prototype.defaultMarker = function (trackingBackend) {
 	if( trackingBackend === 'artoolkit' ){
 		this.contextParameters.detectionMode = 'mono'
 		this.defaultMarkerParameters.type = 'pattern'
-		this.defaultMarkerParameters.patternUrl = 'https://raw.githubusercontent.com/bigboytr/ar/master/ericsson.patt'//THREEx.ArToolkitContext.baseURL + '../data/data/patt.hiro'
+		this.defaultMarkerParameters.patternUrl = THREEx.ArToolkitContext.baseURL + '../data/data/patt.hiro'
 	}else if( trackingBackend === 'aruco' ){
 		this.contextParameters.detectionMode = 'mono'
 		this.defaultMarkerParameters.type = 'barcode'
@@ -7895,7 +7895,7 @@ ARjs.MarkersAreaUtils.createDefaultMultiMarkerFile = function(trackingBackend){
 	}
 	if( trackingBackend === 'artoolkit' ){
 		file.subMarkersControls[0].parameters.type = 'pattern'
-		file.subMarkersControls[0].parameters.patternUrl = 'https://raw.githubusercontent.com/bigboytr/ar/master/ericsson.patt'//absoluteBaseURL + 'examples/marker-training/examples/pattern-files/pattern-hiro.patt'
+		file.subMarkersControls[0].parameters.patternUrl = absoluteBaseURL + 'examples/marker-training/examples/pattern-files/pattern-hiro.patt'
 	}else if( trackingBackend === 'aruco' ){
 		file.subMarkersControls[0].parameters.type = 'barcode'
 		file.subMarkersControls[0].parameters.barcodeValue = 1001
@@ -7927,7 +7927,7 @@ ARjs.MarkersAreaUtils.createDefaultMarkersControlsParameters = function(tracking
 		var markersControlsParameters = [
 			{
 				type : 'pattern',
-				patternUrl : 'https://raw.githubusercontent.com/bigboytr/ar/master/ericsson.patt'//absoluteBaseURL + 'examples/marker-training/examples/pattern-files/pattern-hiro.patt',
+				patternUrl : absoluteBaseURL + 'examples/marker-training/examples/pattern-files/pattern-hiro.patt',
 			},
 			{
 				type : 'pattern',
@@ -8056,7 +8056,7 @@ AFRAME.registerComponent('arjs-anchor', {
 			// honor this.data.preset
 			if( _this.data.preset === 'hiro' ){
 				arProfile.defaultMarkerParameters.type = 'pattern'
-				arProfile.defaultMarkerParameters.patternUrl = 'https://raw.githubusercontent.com/bigboytr/ar/master/ericsson.patt'//THREEx.ArToolkitContext.baseURL+'examples/marker-training/examples/pattern-files/pattern-hiro.patt'
+				arProfile.defaultMarkerParameters.patternUrl = THREEx.ArToolkitContext.baseURL+'examples/marker-training/examples/pattern-files/pattern-hiro.patt'
 				arProfile.defaultMarkerParameters.markersAreaEnabled = false
 			}else if( _this.data.preset === 'kanji' ){
 				arProfile.defaultMarkerParameters.type = 'pattern'
