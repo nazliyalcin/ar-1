@@ -8282,7 +8282,8 @@ AFRAME.registerComponent('arjs-anchor', {
 
 			// honor this.data.preset
 			var markerParameters = Object.assign({}, arProfile.defaultMarkerParameters)
-
+            console.log(_this.data.type);
+			console.log(_this.data.preset);
 			if( _this.data.preset === 'hiro' ){
 				markerParameters.type = 'pattern'
 				markerParameters.patternUrl = THREEx.ArToolkitContext.baseURL+'examples/marker-training/examples/pattern-files/pattern-hiro.patt'
@@ -8306,8 +8307,10 @@ AFRAME.registerComponent('arjs-anchor', {
 				markerParameters.type = _this.data.type
 				markerParameters.patternUrl = _this.data.patternUrl;
 				markerParameters.markersAreaEnabled = false
+				
 			}else {
 				 console.assert( this.data.preset === '', 'illegal preset value '+this.data.preset)
+				 console.log(_this.data.type);
 			}
 
 			//////////////////////////////////////////////////////////////////////////////
