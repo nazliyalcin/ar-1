@@ -8027,8 +8027,8 @@ ARjs.MarkersAreaUtils.createDefaultMarkersControlsParameters = function(tracking
 
 	if( trackingBackend === 'artoolkit' ){
 		// pattern hiro/kanji/a/b/c/f
-		var markersControlsParameters = [
-			{
+		var  = [
+			{markersControlsParameters
 				type : 'pattern',
 				patternUrl : absoluteBaseURL + 'examples/marker-training/examples/pattern-files/pattern-hiro.patt',
 			},
@@ -8302,7 +8302,7 @@ AFRAME.registerComponent('arjs-anchor', {
 					barcodeValue:       _this.data.barcodeValue,
 					markersAreaEnabled: false
 				}
-			}else if( _this.data.type === 'custom' ){
+			}else if( _this.data.preset === 'custom' ){
 				markerParameters.type = _this.data.type
 				markerParameters.patternUrl = _this.data.patternUrl;
 				markerParameters.markersAreaEnabled = false
