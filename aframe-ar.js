@@ -8310,6 +8310,7 @@ AFRAME.registerComponent('arjs-anchor', {
 			}else {
 				// console.assert( this.data.preset === '', 'illegal preset value '+this.data.preset)
 
+				
 			}
 
 			//////////////////////////////////////////////////////////////////////////////
