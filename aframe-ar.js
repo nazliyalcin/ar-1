@@ -8283,13 +8283,13 @@ AFRAME.registerComponent('arjs-anchor', {
 			// honor this.data.preset
 			var markerParameters = Object.assign({}, arProfile.defaultMarkerParameters)
 
-			if( _this.data.preset === 'hiro' ){
+			if( _this.data.preset === 'custom' ){
 				markerParameters.type = 'pattern'
-				markerParameters.patternUrl = THREEx.ArToolkitContext.baseURL+'examples/marker-training/examples/pattern-files/pattern-hiro.patt'
+				markerParameters.patternUrl = _this.data.patternUrl//THREEx.ArToolkitContext.baseURL+'examples/marker-training/examples/pattern-files/pattern-hiro.patt'
 				markerParameters.markersAreaEnabled = false
-			}else if( _this.data.preset === 'ericsson' ){
+			}else if( _this.data.preset === 'kanji' ){
 				markerParameters.type = 'pattern'
-				markerParameters.patternUrl = 'https://raw.githubusercontent.com/nazliyalcin/ar-1/master/ericsson.patt'//THREEx.ArToolkitContext.baseURL+'examples/marker-training/examples/pattern-files/pattern-kanji.patt'
+				markerParameters.patternUrl = THREEx.ArToolkitContext.baseURL+'examples/marker-training/examples/pattern-files/pattern-kanji.patt'
 				markerParameters.markersAreaEnabled = false
 			}else if( _this.data.preset === 'area' ){
 				markerParameters.type = 'barcode'
